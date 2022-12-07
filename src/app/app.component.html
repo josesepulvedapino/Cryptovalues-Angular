@@ -1,0 +1,45 @@
+<div class="container" id="container">
+  <br>
+  <h5 class="text-center">Criptovalues TOP 100 by <span><a target="_blank" href="https://github.com/josesepulvedapino">José Sepúlveda</a></span></h5>
+  <input type="text" class="form-control bg-dark text-light border-o my-4 text-center" placeholder="Ingrese el nombre de la criptomoneda..."
+  (keyup)="buscarCriptomoneda()"
+  [(ngModel)]="buscarTexto">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th *ngFor="let titulo of titulos">
+          {{titulo}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let criptomoneda of criptomonedasFiltradas; let x = index">
+        <td class="text-muted">
+          {{x + 1}}</td>
+        <td>
+          <img [src]="criptomoneda.image" alt="{{criptomoneda.name}}" style="width:2rem ;">
+          <span class="ms-3">{{criptomoneda.name}}
+          </span>
+          <span class="text-muted text-uppercase ms-2">{{criptomoneda.symbol}}
+          </span>
+        </td>
+        <td>
+          ${{criptomoneda.current_price.toLocaleString()}}
+        </td>
+        <td [ngClass]="criptomoneda.price_change_percentage_24h > 0 ? 'text-success': 'text-danger'">
+          {{criptomoneda.price_change_percentage_24h.toLocaleString()}}%</td>
+        <td>
+          {{criptomoneda.total_volume.toLocaleString()}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    <footer>
+      <ul class="list-inline text-center">
+          <li class="list-inline-item"><a target="_blank" href="https://github.com/josesepulvedapino">Github</a></li>
+          <li class="list-inline-item"><a target="_blank" href="https://github.com/josesepulvedapino/Cryptovalues-Angular/blob/main/README.md">Novedades</a></li>
+          <li class="list-inline-item"><a target="_blank" href="https://www.linkedin.com/in/josesepulvedapino/">Linkedin</a></li>
+          <p class="copyright">Cryptovalues © 2022</p>
+      </ul>
+  </footer>
+</div>

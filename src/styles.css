@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: #131418;
+  color: #999;
+}
+.mycooldiv {
+  width: 400px;
+  height: 300px;
+  margin: 2% auto;
+  border-radius: 100%;
+}
+#darken {
+  box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, .7);
+}
+h5 {
+  color:azure ;
+}
+a {
+  color: rgb(164, 64, 173);
+}
+a:hover {
+  color: #467e83;
+}
+
+#container {
+  font-family: 'Source Code Pro', monospace;
+}
