@@ -7,12 +7,14 @@ Esta aplicación fue creada en base al framework Angular 15 y la Crypto API de C
 
 ## Novedades
 
-### Versión 1.0
+### Versión 1.1
 
 - TOP 100 Criptomonedas
 - Precio actual en dólares
 - Volatilidad en 24hrs
 - Volumen total
+- Filtro de precio y cambio 24hrs (nuevo 1.1)
+
 
 
 
